@@ -3,7 +3,6 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
-import Image from "next/image"
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -20,15 +19,8 @@ export function Navigation() {
     <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b border-border/50 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <button onClick={() => scrollToSection("home")} className="flex-shrink-0 bg-white/95 px-3 py-2 rounded-lg">
-            <Image
-              src="/images/logo.png"
-              alt="Zweifel Capital"
-              width={180}
-              height={40}
-              className="h-8 w-auto"
-              priority
-            />
+          <button onClick={() => scrollToSection("home")} className="flex-shrink-0">
+            <span className="text-xl font-semibold text-foreground">Zweifel Capital</span>
           </button>
 
           {/* Desktop Navigation */}

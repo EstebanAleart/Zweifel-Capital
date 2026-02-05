@@ -1,20 +1,10 @@
-import Image from "next/image"
-
 export default function Footer() {
   return (
     <footer className="bg-secondary/50 border-t border-border/50 py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div className="md:col-span-1">
-            <div className="bg-white/95 px-3 py-2 rounded-lg inline-block mb-4">
-              <Image
-                src="/images/logo.png"
-                alt="Zweifel Capital"
-                width={160}
-                height={40}
-                className="h-8 w-auto"
-              />
-            </div>
+            <h3 className="text-xl font-semibold text-foreground mb-4">Zweifel Capital</h3>
             <p className="text-muted-foreground text-sm">
               Family Office & Alternative Investments
             </p>
