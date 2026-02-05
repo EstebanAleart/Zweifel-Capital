@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
+import Image from "next/image"
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -16,12 +17,19 @@ export function Navigation() {
   }
 
   return (
-    <nav className="fixed top-0 w-full bg-background/95 backdrop-blur-sm border-b border-border z-50">
+    <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b border-border/50 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <div className="flex-shrink-0">
-            <h1 className="text-xl font-bold text-primary font-serif">Zweifel Capital</h1>
-          </div>
+        <div className="flex justify-between items-center h-20">
+          <button onClick={() => scrollToSection("home")} className="flex-shrink-0 bg-white/95 px-3 py-2 rounded-lg">
+            <Image
+              src="/images/logo.png"
+              alt="Zweifel Capital"
+              width={180}
+              height={40}
+              className="h-8 w-auto"
+              priority
+            />
+          </button>
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
@@ -43,6 +51,12 @@ export function Navigation() {
                 className="text-foreground hover:text-primary transition-colors"
               >
                 Strategy
+              </button>
+              <button
+                onClick={() => scrollToSection("offices")}
+                className="text-foreground hover:text-primary transition-colors"
+              >
+                Offices
               </button>
               <button
                 onClick={() => scrollToSection("contact")}
@@ -92,6 +106,12 @@ export function Navigation() {
                 className="block w-full text-left px-3 py-2 text-foreground hover:text-primary"
               >
                 Strategy
+              </button>
+              <button
+                onClick={() => scrollToSection("offices")}
+                className="block w-full text-left px-3 py-2 text-foreground hover:text-primary"
+              >
+                Offices
               </button>
               <button
                 onClick={() => scrollToSection("contact")}

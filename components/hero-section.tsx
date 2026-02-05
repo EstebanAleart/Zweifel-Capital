@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { ArrowRight, TrendingUp } from "lucide-react"
+import { ArrowRight, ArrowDown } from "lucide-react"
 
 export function HeroSection() {
   const scrollToSection = (sectionId: string) => {
@@ -14,68 +14,79 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-secondary/30 to-background"
+      className="min-h-screen flex flex-col justify-center relative overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="text-center">
-          {/* Announcement Badge */}
-          <div className="inline-flex items-center gap-2 bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-medium mb-8">
-            <TrendingUp className="h-4 w-4" />
-            <span>40+ Years of Agricultural Investment Excellence</span>
-            <ArrowRight className="h-4 w-4" />
-          </div>
+      {/* Background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-secondary/20" />
+
+      {/* Subtle grid pattern */}
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:72px_72px]" />
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
+        <div className="max-w-4xl">
+          {/* Tagline */}
+          <p className="text-primary font-medium tracking-widest uppercase text-sm mb-6">
+            Family Office & Alternative Investments
+          </p>
 
           {/* Main Heading */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-foreground mb-6 text-balance">
-            Alternative Investments
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-medium text-foreground mb-8 leading-[1.1] tracking-tight">
+            Dream Big,
             <br />
-            <span className="text-primary">for Real Assets</span>
+            <span className="text-primary">Act Bigger.</span>
           </h1>
 
           {/* Subheading */}
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-12 text-pretty leading-relaxed">
-            We are a family-owned investment platform dedicated to alternative investments across Latin America and
-            Spain, with a distinctive focus on agriculture, land, and real assets. Building trusted partnerships with
-            patient capital.
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mb-12 leading-relaxed font-light">
+            A family-owned investment platform dedicated to alternative investments across
+            Latin America and Spain. Real assets. Patient capital. Trusted partnerships.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4">
             <Button
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-base font-medium"
               onClick={() => scrollToSection("about")}
             >
-              Learn More
+              Discover Our Approach
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button
               variant="outline"
               size="lg"
-              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 bg-transparent"
+              className="border-border text-foreground hover:bg-secondary hover:text-foreground px-8 py-6 text-base font-medium"
               onClick={() => scrollToSection("strategy")}
             >
-              View Our Strategy
+              View Strategy
             </Button>
           </div>
+        </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20 pt-20 border-t border-border">
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">40+</div>
-              <div className="text-muted-foreground">Years Experience</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-accent mb-2">2</div>
-              <div className="text-muted-foreground">Continents</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">100%</div>
-              <div className="text-muted-foreground">Family Capital</div>
-            </div>
+        {/* Stats Row */}
+        <div className="grid grid-cols-3 gap-8 mt-24 pt-12 border-t border-border/50 max-w-3xl">
+          <div>
+            <div className="text-4xl md:text-5xl font-serif font-medium text-foreground mb-2">40+</div>
+            <div className="text-muted-foreground text-sm uppercase tracking-wider">Years Experience</div>
+          </div>
+          <div>
+            <div className="text-4xl md:text-5xl font-serif font-medium text-foreground mb-2">2</div>
+            <div className="text-muted-foreground text-sm uppercase tracking-wider">Continents</div>
+          </div>
+          <div>
+            <div className="text-4xl md:text-5xl font-serif font-medium text-foreground mb-2">100%</div>
+            <div className="text-muted-foreground text-sm uppercase tracking-wider">Family Capital</div>
           </div>
         </div>
       </div>
+
+      {/* Scroll indicator */}
+      <button
+        onClick={() => scrollToSection("about")}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-muted-foreground hover:text-foreground transition-colors"
+      >
+        <ArrowDown className="h-6 w-6 animate-bounce" />
+      </button>
     </section>
   )
 }

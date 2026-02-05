@@ -4,40 +4,40 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Updated color palette for Zweifel Capital - blue, white, green theme */
-  --background: oklch(0.99 0.005 240);
-  --foreground: oklch(0.15 0.02 240);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.15 0.02 240);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.15 0.02 240);
-  --primary: oklch(0.35 0.15 240); /* Corporate blue */
-  --primary-foreground: oklch(0.99 0.005 240);
-  --secondary: oklch(0.96 0.01 240);
-  --secondary-foreground: oklch(0.15 0.02 240);
-  --muted: oklch(0.96 0.01 240);
-  --muted-foreground: oklch(0.45 0.05 240);
-  --accent: oklch(0.45 0.12 150); /* Green accent */
-  --accent-foreground: oklch(0.99 0.005 240);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.99 0.005 240);
-  --border: oklch(0.92 0.01 240);
-  --input: oklch(0.92 0.01 240);
-  --ring: oklch(0.35 0.15 240);
-  --chart-1: oklch(0.35 0.15 240);
-  --chart-2: oklch(0.45 0.12 150);
+  /* Dark premium theme - navy blue matching Zweifel Capital logo */
+  --background: oklch(0.15 0.03 240); /* Deep navy */
+  --foreground: oklch(0.95 0.01 240); /* Off-white */
+  --card: oklch(0.18 0.03 240); /* Slightly lighter navy */
+  --card-foreground: oklch(0.95 0.01 240);
+  --popover: oklch(0.18 0.03 240);
+  --popover-foreground: oklch(0.95 0.01 240);
+  --primary: oklch(0.55 0.15 240); /* Corporate blue matching logo */
+  --primary-foreground: oklch(0.98 0.01 240);
+  --secondary: oklch(0.22 0.03 240); /* Dark slate */
+  --secondary-foreground: oklch(0.90 0.01 240);
+  --muted: oklch(0.25 0.02 240);
+  --muted-foreground: oklch(0.65 0.02 240); /* Muted gray-blue */
+  --accent: oklch(0.65 0.10 200); /* Light blue accent */
+  --accent-foreground: oklch(0.15 0.03 240);
+  --destructive: oklch(0.55 0.2 25);
+  --destructive-foreground: oklch(0.95 0.01 240);
+  --border: oklch(0.30 0.03 240); /* Subtle border */
+  --input: oklch(0.22 0.02 240);
+  --ring: oklch(0.55 0.15 240);
+  --chart-1: oklch(0.55 0.15 240);
+  --chart-2: oklch(0.65 0.10 200);
   --chart-3: oklch(0.6 0.1 200);
   --chart-4: oklch(0.7 0.08 180);
   --chart-5: oklch(0.5 0.1 120);
-  --radius: 0.5rem;
-  --sidebar: oklch(0.99 0.005 240);
-  --sidebar-foreground: oklch(0.15 0.02 240);
-  --sidebar-primary: oklch(0.35 0.15 240);
-  --sidebar-primary-foreground: oklch(0.99 0.005 240);
-  --sidebar-accent: oklch(0.96 0.01 240);
-  --sidebar-accent-foreground: oklch(0.15 0.02 240);
-  --sidebar-border: oklch(0.92 0.01 240);
-  --sidebar-ring: oklch(0.35 0.15 240);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.15 0.03 240);
+  --sidebar-foreground: oklch(0.95 0.01 240);
+  --sidebar-primary: oklch(0.55 0.15 240);
+  --sidebar-primary-foreground: oklch(0.98 0.01 240);
+  --sidebar-accent: oklch(0.22 0.03 240);
+  --sidebar-accent-foreground: oklch(0.95 0.01 240);
+  --sidebar-border: oklch(0.30 0.03 240);
+  --sidebar-ring: oklch(0.55 0.15 240);
 }
 
 .dark {
@@ -71,8 +71,9 @@
 }
 
 @theme inline {
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-manrope), system-ui, sans-serif;
+  --font-serif: var(--font-cormorant), Georgia, serif;
+  --font-mono: ui-monospace, monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -117,5 +118,8 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+  button, a, [role="button"] {
+    @apply cursor-pointer;
   }
 }
