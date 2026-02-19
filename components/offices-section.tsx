@@ -37,7 +37,7 @@ export function OfficesSection() {
               className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow"
             >
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-emerald-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-blue-800 rounded-xl flex items-center justify-center flex-shrink-0">
                   <MapPin className="h-6 w-6 text-white" />
                 </div>
                 <div>

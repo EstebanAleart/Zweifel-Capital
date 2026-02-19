@@ -45,15 +45,15 @@ export function Navigation() {
                 <button
                   key={link.id}
                   onClick={() => scrollToSection(link.id)}
-                  className="text-slate-700 hover:text-emerald-600 transition-colors font-medium text-sm cursor-pointer"
+                  className="text-slate-700 hover:text-blue-800 transition-colors font-medium text-sm cursor-pointer"
                 >
                   {link.label}
                 </button>
               ))}
             </div>
             <Button
-              className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold cursor-pointer"
-              onClick={() => window.location.href = "mailto:delfina@zweifelcapital.com?subject=Investment Inquiry&body=Hello, I would like to learn more about investment opportunities with Zweifel Capital."}
+              className="bg-blue-800 hover:bg-blue-900 text-white font-semibold cursor-pointer"
+              onClick={() => window.open("https://mail.google.com/mail/?view=cm&to=delfina@zweifelcapital.com&su=Investment+Inquiry&body=Hello,+I+would+like+to+learn+more+about+investment+opportunities+with+Zweifel+Capital.", "_blank")}
             >
               Get in Touch
             </Button>
@@ -75,15 +75,15 @@ export function Navigation() {
                 <button
                   key={link.id}
                   onClick={() => scrollToSection(link.id)}
-                  className="block w-full text-left px-4 py-3 text-slate-700 hover:text-emerald-600 hover:bg-slate-50 rounded-lg transition-colors cursor-pointer"
+                  className="block w-full text-left px-4 py-3 text-slate-700 hover:text-blue-800 hover:bg-slate-50 rounded-lg transition-colors cursor-pointer"
                 >
                   {link.label}
                 </button>
               ))}
               <div className="px-4 pt-2">
                 <Button
-                  className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold cursor-pointer"
-                  onClick={() => window.location.href = "mailto:delfina@zweifelcapital.com?subject=Investment Inquiry&body=Hello, I would like to learn more about investment opportunities with Zweifel Capital."}
+                  className="w-full bg-blue-800 hover:bg-blue-900 text-white font-semibold cursor-pointer"
+                  onClick={() => window.open("https://mail.google.com/mail/?view=cm&to=delfina@zweifelcapital.com&su=Investment+Inquiry&body=Hello,+I+would+like+to+learn+more+about+investment+opportunities+with+Zweifel+Capital.", "_blank")}
                 >
                   Get in Touch
                 </Button>

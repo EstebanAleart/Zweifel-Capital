@@ -1,10 +1,26 @@
 "use client"
 
+import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, ChevronDown } from "lucide-react"
 import Image from "next/image"
 
+const heroImages = [
+  "/images/hero-farmland1.jpg",
+  "/images/hero-farmland2.jpg",
+  "/images/hero-farmland3.jpg",
+]
+
 export function HeroSection() {
+  const [currentImage, setCurrentImage] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % heroImages.length)
+    }, 6000)
+    return () => clearInterval(interval)
+  }, [])
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
     if (element) {
@@ -14,18 +30,24 @@ export function HeroSection() {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/images/hero-farmland.jpg"
-          alt="Agricultural landscape"
-          fill
-          className="object-cover"
-          priority
-          quality={90}
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/70 to-slate-900/50" />
-      </div>
+      {/* Background Images with crossfade */}
+      {heroImages.map((src, index) => (
+        <div
+          key={src}
+          className="absolute inset-0 z-0 transition-opacity duration-1500 ease-in-out"
+          style={{ opacity: index === currentImage ? 1 : 0 }}
+        >
+          <Image
+            src={src}
+            alt="Agricultural landscape"
+            fill
+            className="object-cover"
+            priority={index === 0}
+            quality={90}
+          />
+        </div>
+      ))}
+      <div className="absolute inset-0 z-[1] bg-gradient-to-r from-slate-900/90 via-slate-900/70 to-slate-900/50" />
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
@@ -55,7 +77,7 @@ export function HeroSection() {
           <div className="flex flex-col sm:flex-row gap-4">
             <Button
               size="lg"
-              className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-8 py-6 text-base cursor-pointer"
+              className="bg-blue-800 hover:bg-blue-900 text-white font-semibold px-8 py-6 text-base cursor-pointer"
               onClick={() => scrollToSection("about")}
             >
               Learn More
@@ -89,6 +111,19 @@ export function HeroSection() {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Image indicators */}
+      <div className="absolute bottom-20 left-1/2 -translate-x-1/2 z-10 flex gap-2">
+        {heroImages.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentImage(index)}
+            className={`w-2 h-2 rounded-full transition-all cursor-pointer ${
+              index === currentImage ? "bg-emerald-400 w-6" : "bg-white/40"
+            }`}
+          />
+        ))}
       </div>
 
       {/* Scroll Indicator */}

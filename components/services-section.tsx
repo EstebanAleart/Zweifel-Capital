@@ -16,7 +16,7 @@ export function ServicesSection() {
       title: "Land & Sustainable Investments",
       description:
         "Selective exposure to productive and environmentally responsible developments.",
-      image: "/images/hero-farmland.jpg",
+      image: "/images/hero-farmland4.jpg",
     },
   ]
 
@@ -107,7 +107,7 @@ export function ServicesSection() {
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <div className="flex items-center gap-3 mb-2">
-                    <div className="w-10 h-10 bg-emerald-600 rounded-lg flex items-center justify-center">
+                    <div className="w-10 h-10 bg-blue-800 rounded-lg flex items-center justify-center">
                       <item.icon className="h-5 w-5 text-white" />
                     </div>
                     <h3 className="text-xl font-bold text-white">{item.title}</h3>
@@ -168,7 +168,7 @@ export function ServicesSection() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
             {edges.map((edge, index) => (
               <div key={index} className="text-center">
-                <div className="w-14 h-14 bg-emerald-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-14 h-14 bg-blue-800/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <edge.icon className="h-7 w-7 text-emerald-400" />
                 </div>
                 <h4 className="font-semibold text-white mb-2">{edge.title}</h4>

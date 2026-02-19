@@ -52,10 +52,12 @@ export function ContactSection() {
 
               <div className="mt-6">
                 <Button
-                  className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-5 cursor-pointer"
+                  className="w-full bg-blue-800 hover:bg-blue-900 text-white font-semibold py-5 cursor-pointer"
                   onClick={() =>
-                    (window.location.href =
-                      "mailto:delfina@zweifelcapital.com?subject=Investment Inquiry&body=Hello, I would like to learn more about investment opportunities with Zweifel Capital.")
+                    window.open(
+                      "https://mail.google.com/mail/?view=cm&to=delfina@zweifelcapital.com&su=Investment+Inquiry&body=Hello,+I+would+like+to+learn+more+about+investment+opportunities+with+Zweifel+Capital.",
+                      "_blank"
+                    )
                   }
                 >
                   <Mail className="mr-2 h-4 w-4" />
@@ -95,10 +97,12 @@ export function ContactSection() {
 
               <div className="mt-6">
                 <Button
-                  className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-5 cursor-pointer"
+                  className="w-full bg-blue-800 hover:bg-blue-900 text-white font-semibold py-5 cursor-pointer"
                   onClick={() =>
-                    (window.location.href =
-                      "mailto:kurt@zweifelcapital.com?subject=Investment Inquiry&body=Hello, I would like to learn more about investment opportunities with Zweifel Capital.")
+                    window.open(
+                      "https://mail.google.com/mail/?view=cm&to=kurt@zweifelcapital.com&su=Investment+Inquiry&body=Hello,+I+would+like+to+learn+more+about+investment+opportunities+with+Zweifel+Capital.",
+                      "_blank"
+                    )
                   }
                 >
                   <Mail className="mr-2 h-4 w-4" />
