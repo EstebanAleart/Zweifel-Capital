@@ -49,8 +49,9 @@ export function AboutSection() {
                 src="/images/kurt-zweifel.jpg"
                 alt="Kurt Zweifel"
                 fill
-                className="object-cover object-[50%_0%] grayscale"
-              />
+                className="object-cover grayscale"
+                style={{ objectPosition: '0% 150%' }}
+                />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent" />
               <div className="absolute bottom-4 left-6 right-6 flex justify-between items-end">
                 <div>
@@ -172,7 +173,8 @@ export function AboutSection() {
                 src="/images/delfina-zweifel.jpg"
                 alt="Delfina Zweifel"
                 fill
-                className="object-cover object-[60%_15%] grayscale"
+                className="object-cover grayscale"
+                style={{ objectPosition: '50% 0%' }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent" />
               <div className="absolute bottom-4 left-6 right-6 flex justify-between items-end">
