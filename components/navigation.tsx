@@ -20,7 +20,6 @@ export function Navigation() {
     { label: "Home", id: "home" },
     { label: "About", id: "about" },
     { label: "Strategy", id: "strategy" },
-    { label: "Offices", id: "offices" },
     { label: "Contact", id: "contact" },
   ]
 
@@ -40,7 +39,7 @@ export function Navigation() {
           </button>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:block">
+          <div className="hidden md:flex items-center gap-8">
             <div className="flex items-center space-x-8">
               {navLinks.map((link) => (
                 <button
@@ -52,9 +51,6 @@ export function Navigation() {
                 </button>
               ))}
             </div>
-          </div>
-
-          <div className="hidden md:block">
             <Button
               className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold cursor-pointer"
               onClick={() => window.location.href = "mailto:delfina@zweifelcapital.com?subject=Investment Inquiry&body=Hello, I would like to learn more about investment opportunities with Zweifel Capital."}

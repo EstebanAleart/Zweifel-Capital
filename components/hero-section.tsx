@@ -33,20 +33,22 @@ export function HeroSection() {
           {/* Tagline */}
           <div className="inline-flex items-center gap-2 bg-emerald-500/20 backdrop-blur-sm text-emerald-300 px-4 py-2 rounded-full text-sm font-medium mb-8 border border-emerald-500/30">
             <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
-            <span>40+ Years of Investment Excellence</span>
+            <span>35+ Years of Investment Heritage</span>
           </div>
 
           {/* Main Heading */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-6 leading-tight">
-            Alternative Investments
+            Real Assets.
             <br />
-            <span className="text-emerald-400">for Real Assets</span>
+            Real Partnerships.
+            <br />
+            <span className="text-emerald-400">Real Returns.</span>
           </h1>
 
           {/* Subheading */}
           <p className="text-lg md:text-xl text-slate-300 mb-10 leading-relaxed max-w-2xl">
             A family-owned investment platform dedicated to alternative investments across Latin America and Spain,
-            with a distinctive focus on agriculture, land, and real assets.
+            with a distinctive focus on agriculture, land, and real assets. Building trusted partnerships with patient capital.
           </p>
 
           {/* CTA Buttons */}
@@ -56,7 +58,7 @@ export function HeroSection() {
               className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-8 py-6 text-base cursor-pointer"
               onClick={() => scrollToSection("about")}
             >
-              Discover Our Story
+              Learn More
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button
@@ -65,17 +67,17 @@ export function HeroSection() {
               className="border-white/30 text-white hover:bg-white/10 px-8 py-6 text-base bg-transparent cursor-pointer"
               onClick={() => scrollToSection("strategy")}
             >
-              View Strategy
+              View Our Strategy
             </Button>
           </div>
         </div>
 
         {/* Stats Bar */}
         <div className="mt-20 pt-10 border-t border-white/20">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-3 gap-8 max-w-3xl">
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-emerald-400 mb-1">40+</div>
-              <div className="text-slate-400 text-sm uppercase tracking-wider">Years Experience</div>
+              <div className="text-3xl md:text-4xl font-bold text-emerald-400 mb-1">35+</div>
+              <div className="text-slate-400 text-sm uppercase tracking-wider">Years of Investment Heritage</div>
             </div>
             <div>
               <div className="text-3xl md:text-4xl font-bold text-white mb-1">2</div>
@@ -83,11 +85,7 @@ export function HeroSection() {
             </div>
             <div>
               <div className="text-3xl md:text-4xl font-bold text-emerald-400 mb-1">100%</div>
-              <div className="text-slate-400 text-sm uppercase tracking-wider">Family Capital</div>
-            </div>
-            <div>
-              <div className="text-3xl md:text-4xl font-bold text-white mb-1">4</div>
-              <div className="text-slate-400 text-sm uppercase tracking-wider">Countries</div>
+              <div className="text-slate-400 text-sm uppercase tracking-wider">Independent Ownership</div>
             </div>
           </div>
         </div>

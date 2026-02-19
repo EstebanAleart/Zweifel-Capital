@@ -12,11 +12,11 @@ export default function Footer() {
             <h3 className="text-2xl font-bold mb-2">
               <span className="text-emerald-400">Zweifel</span> Capital
             </h3>
-            <p className="text-slate-400 text-sm mb-6">
-              Family Office & Alternative Investments
+            <p className="text-slate-400 text-sm mb-4">
+              Co-Investment Platform
             </p>
             <p className="text-slate-500 text-sm leading-relaxed">
-              Building trusted partnerships with patient capital across Latin America and Spain.
+              Alternative Investments &bull; Real Assets
             </p>
           </div>
 
@@ -33,7 +33,10 @@ export default function Footer() {
               </div>
               <div className="flex items-start gap-3">
                 <Phone className="h-5 w-5 text-emerald-400 flex-shrink-0 mt-0.5" />
-                <p className="text-slate-400 text-sm">+44 077 359 36395</p>
+                <div className="text-slate-400 text-sm">
+                  <p>+44 7868 140 409</p>
+                  <p>+54 9 2392 40-1456</p>
+                </div>
               </div>
             </div>
           </div>
@@ -44,9 +47,8 @@ export default function Footer() {
             <div className="flex items-start gap-3">
               <MapPin className="h-5 w-5 text-emerald-400 flex-shrink-0 mt-0.5" />
               <div className="text-slate-400 text-sm">
-                <p>1 Knightsbridge Green</p>
-                <p>SW1X 7NE, London</p>
-                <p>United Kingdom</p>
+                <p>7 Stratton Street, Mayfair</p>
+                <p>W1J 8LE, London</p>
               </div>
             </div>
           </div>
@@ -57,9 +59,9 @@ export default function Footer() {
             <div className="flex items-start gap-3">
               <MapPin className="h-5 w-5 text-emerald-400 flex-shrink-0 mt-0.5" />
               <div className="text-slate-400 text-sm">
+                <p>Lyford Cay Club</p>
                 <p>Lyford Cay Drive</p>
-                <p>P.O. Box N-7776</p>
-                <p>Bahamas</p>
+                <p>Nassau, Bahamas</p>
               </div>
             </div>
           </div>
@@ -70,12 +72,11 @@ export default function Footer() {
       <div className="border-t border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="bg-slate-800/50 rounded-xl p-6 mb-8">
-            <h5 className="font-semibold text-emerald-400 mb-3 text-sm">Important Disclaimer</h5>
+            <h5 className="font-semibold text-emerald-400 mb-3 text-sm">Disclaimer</h5>
             <p className="text-slate-400 text-sm leading-relaxed">
-              Zweifel Capital does not offer investment advice or solicitations to the public. Information presented on
-              this site is illustrative and intended for professional and sophisticated investors only. All investments
-              involve risk, including the potential loss of capital. Past performance is not indicative of future
-              results.
+              Zweifel Capital does not offer investment advice or public solicitations. Information is illustrative and
+              intended for professional or sophisticated investors. All investments involve risk, including potential loss
+              of capital. Past performance is not indicative of future results.
             </p>
           </div>
 
