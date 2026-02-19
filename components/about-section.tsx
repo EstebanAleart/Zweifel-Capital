@@ -9,13 +9,13 @@ export function AboutSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="inline-block text-amber-600 text-sm font-semibold uppercase tracking-wider mb-3">
+          <span className="inline-block text-emerald-600 text-sm font-semibold uppercase tracking-wider mb-3">
             Who We Are
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-slate-900 mb-6">
             Family Legacy Meets
             <br />
-            <span className="text-amber-600">Global Expertise</span>
+            <span className="text-emerald-600">Global Expertise</span>
           </h2>
           <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
             Zweifel Capital is a family office co-founded by Kurt and Delfina Zweifel. We are investors with decades of
@@ -38,7 +38,7 @@ export function AboutSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent" />
               <div className="absolute bottom-4 left-6 right-6">
                 <h3 className="text-2xl font-bold text-white mb-1">Kurt Zweifel</h3>
-                <p className="text-amber-400 font-medium">Co-Founder</p>
+                <p className="text-emerald-400 font-medium">Co-Founder</p>
               </div>
             </div>
             <CardContent className="p-6">
@@ -51,13 +51,13 @@ export function AboutSection() {
               <div className="space-y-3">
                 <div className="flex items-center gap-3 text-sm">
                   <div className="w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center">
-                    <MapPin className="h-4 w-4 text-amber-600" />
+                    <MapPin className="h-4 w-4 text-emerald-600" />
                   </div>
                   <span className="text-slate-600">Buenos Aires, Argentina</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm">
                   <div className="w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center">
-                    <Briefcase className="h-4 w-4 text-amber-600" />
+                    <Briefcase className="h-4 w-4 text-emerald-600" />
                   </div>
                   <span className="text-slate-600">40+ years in agriculture & Swiss corporates</span>
                 </div>
@@ -78,7 +78,7 @@ export function AboutSection() {
               <div className="absolute bottom-4 left-6 right-6 flex justify-between items-end">
                 <div>
                   <h3 className="text-2xl font-bold text-white mb-1">Delfina Zweifel</h3>
-                  <p className="text-amber-400 font-medium">Co-Founder</p>
+                  <p className="text-emerald-400 font-medium">Co-Founder</p>
                 </div>
                 <Link
                   href="https://www.linkedin.com/in/delfina-zweifel-b9030241/"
@@ -100,19 +100,19 @@ export function AboutSection() {
               <div className="space-y-3">
                 <div className="flex items-center gap-3 text-sm">
                   <div className="w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center">
-                    <MapPin className="h-4 w-4 text-amber-600" />
+                    <MapPin className="h-4 w-4 text-emerald-600" />
                   </div>
                   <span className="text-slate-600">New York, London, Nassau</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm">
                   <div className="w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center">
-                    <Briefcase className="h-4 w-4 text-amber-600" />
+                    <Briefcase className="h-4 w-4 text-emerald-600" />
                   </div>
                   <span className="text-slate-600">J.P. Morgan, Vivaldi Group, Faro Capital</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm">
                   <div className="w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center">
-                    <GraduationCap className="h-4 w-4 text-amber-600" />
+                    <GraduationCap className="h-4 w-4 text-emerald-600" />
                   </div>
                   <span className="text-slate-600">BBA Emory University (Finance & Marketing)</span>
                 </div>
@@ -129,8 +129,8 @@ export function AboutSection() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-amber-600 font-bold text-lg">80s</span>
+              <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-emerald-600 font-bold text-lg">80s</span>
               </div>
               <h4 className="font-semibold text-slate-900 mb-2 text-lg">Foundation</h4>
               <p className="text-slate-600 leading-relaxed">
@@ -151,7 +151,7 @@ export function AboutSection() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-amber-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold text-lg">Now</span>
               </div>
               <h4 className="font-semibold text-slate-900 mb-2 text-lg">Zweifel Capital</h4>

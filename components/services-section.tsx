@@ -48,12 +48,12 @@ export function ServicesSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="inline-block text-amber-600 text-sm font-semibold uppercase tracking-wider mb-3">
+          <span className="inline-block text-emerald-600 text-sm font-semibold uppercase tracking-wider mb-3">
             Investment Strategy
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-slate-900 mb-6">
             Real Assets.
-            <span className="text-amber-600"> Real Partnerships.</span>
+            <span className="text-emerald-600"> Real Partnerships.</span>
           </h2>
           <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
             We invest alongside like-minded partners through aligned co-investment with clear governance and transparent
@@ -78,7 +78,7 @@ export function ServicesSection() {
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <div className="flex items-center gap-3 mb-2">
-                    <div className="w-10 h-10 bg-amber-500 rounded-lg flex items-center justify-center">
+                    <div className="w-10 h-10 bg-emerald-600 rounded-lg flex items-center justify-center">
                       <service.icon className="h-5 w-5 text-white" />
                     </div>
                     <h3 className="text-xl font-bold text-white">{service.title}</h3>
@@ -135,8 +135,8 @@ export function ServicesSection() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {edges.map((edge, index) => (
               <div key={index} className="text-center">
-                <div className="w-14 h-14 bg-amber-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <edge.icon className="h-7 w-7 text-amber-400" />
+                <div className="w-14 h-14 bg-emerald-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <edge.icon className="h-7 w-7 text-emerald-400" />
                 </div>
                 <h4 className="font-semibold text-white mb-2">{edge.title}</h4>
                 <p className="text-sm text-slate-400">{edge.description}</p>
@@ -157,7 +157,7 @@ export function ServicesSection() {
                 "Long-term partnership approach",
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-amber-500 flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="h-5 w-5 text-emerald-500 flex-shrink-0 mt-0.5" />
                   <span className="text-slate-600">{item}</span>
                 </li>
               ))}
@@ -173,7 +173,7 @@ export function ServicesSection() {
                 "Cross-border investment facilitation",
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-amber-500 flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="h-5 w-5 text-emerald-500 flex-shrink-0 mt-0.5" />
                   <span className="text-slate-600">{item}</span>
                 </li>
               ))}

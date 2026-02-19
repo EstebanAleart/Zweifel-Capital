@@ -10,7 +10,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <h3 className="text-2xl font-bold mb-2">
-              <span className="text-amber-400">Zweifel</span> Capital
+              <span className="text-emerald-400">Zweifel</span> Capital
             </h3>
             <p className="text-slate-400 text-sm mb-6">
               Family Office & Alternative Investments
@@ -25,14 +25,14 @@ export default function Footer() {
             <h4 className="font-semibold text-white mb-6 text-sm uppercase tracking-wider">Contact</h4>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
-                <Mail className="h-5 w-5 text-amber-400 flex-shrink-0 mt-0.5" />
+                <Mail className="h-5 w-5 text-emerald-400 flex-shrink-0 mt-0.5" />
                 <div className="text-slate-400 text-sm">
                   <p>delfina@zweifelcapital.com</p>
                   <p>kurt@zweifelcapital.com</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <Phone className="h-5 w-5 text-amber-400 flex-shrink-0 mt-0.5" />
+                <Phone className="h-5 w-5 text-emerald-400 flex-shrink-0 mt-0.5" />
                 <p className="text-slate-400 text-sm">+44 077 359 36395</p>
               </div>
             </div>
@@ -42,7 +42,7 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-white mb-6 text-sm uppercase tracking-wider">London</h4>
             <div className="flex items-start gap-3">
-              <MapPin className="h-5 w-5 text-amber-400 flex-shrink-0 mt-0.5" />
+              <MapPin className="h-5 w-5 text-emerald-400 flex-shrink-0 mt-0.5" />
               <div className="text-slate-400 text-sm">
                 <p>1 Knightsbridge Green</p>
                 <p>SW1X 7NE, London</p>
@@ -55,7 +55,7 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-white mb-6 text-sm uppercase tracking-wider">Nassau</h4>
             <div className="flex items-start gap-3">
-              <MapPin className="h-5 w-5 text-amber-400 flex-shrink-0 mt-0.5" />
+              <MapPin className="h-5 w-5 text-emerald-400 flex-shrink-0 mt-0.5" />
               <div className="text-slate-400 text-sm">
                 <p>Lyford Cay Drive</p>
                 <p>P.O. Box N-7776</p>
@@ -70,7 +70,7 @@ export default function Footer() {
       <div className="border-t border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="bg-slate-800/50 rounded-xl p-6 mb-8">
-            <h5 className="font-semibold text-amber-400 mb-3 text-sm">Important Disclaimer</h5>
+            <h5 className="font-semibold text-emerald-400 mb-3 text-sm">Important Disclaimer</h5>
             <p className="text-slate-400 text-sm leading-relaxed">
               Zweifel Capital does not offer investment advice or solicitations to the public. Information presented on
               this site is illustrative and intended for professional and sophisticated investors only. All investments
@@ -89,7 +89,7 @@ export default function Footer() {
                 href="https://www.linkedin.com/in/delfina-zweifel-b9030241/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-slate-500 hover:text-amber-400 transition-colors text-sm"
+                className="text-slate-500 hover:text-emerald-400 transition-colors text-sm"
               >
                 LinkedIn
               </Link>

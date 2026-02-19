@@ -31,8 +31,8 @@ export function HeroSection() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
         <div className="max-w-3xl">
           {/* Tagline */}
-          <div className="inline-flex items-center gap-2 bg-amber-500/20 backdrop-blur-sm text-amber-300 px-4 py-2 rounded-full text-sm font-medium mb-8 border border-amber-500/30">
-            <span className="w-2 h-2 bg-amber-400 rounded-full animate-pulse" />
+          <div className="inline-flex items-center gap-2 bg-emerald-500/20 backdrop-blur-sm text-emerald-300 px-4 py-2 rounded-full text-sm font-medium mb-8 border border-emerald-500/30">
+            <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
             <span>40+ Years of Investment Excellence</span>
           </div>
 
@@ -40,7 +40,7 @@ export function HeroSection() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-6 leading-tight">
             Alternative Investments
             <br />
-            <span className="text-amber-400">for Real Assets</span>
+            <span className="text-emerald-400">for Real Assets</span>
           </h1>
 
           {/* Subheading */}
@@ -53,7 +53,7 @@ export function HeroSection() {
           <div className="flex flex-col sm:flex-row gap-4">
             <Button
               size="lg"
-              className="bg-amber-500 hover:bg-amber-600 text-slate-900 font-semibold px-8 py-6 text-base cursor-pointer"
+              className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-8 py-6 text-base cursor-pointer"
               onClick={() => scrollToSection("about")}
             >
               Discover Our Story
@@ -74,7 +74,7 @@ export function HeroSection() {
         <div className="mt-20 pt-10 border-t border-white/20">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-amber-400 mb-1">40+</div>
+              <div className="text-3xl md:text-4xl font-bold text-emerald-400 mb-1">40+</div>
               <div className="text-slate-400 text-sm uppercase tracking-wider">Years Experience</div>
             </div>
             <div>
@@ -82,7 +82,7 @@ export function HeroSection() {
               <div className="text-slate-400 text-sm uppercase tracking-wider">Continents</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-amber-400 mb-1">100%</div>
+              <div className="text-3xl md:text-4xl font-bold text-emerald-400 mb-1">100%</div>
               <div className="text-slate-400 text-sm uppercase tracking-wider">Family Capital</div>
             </div>
             <div>

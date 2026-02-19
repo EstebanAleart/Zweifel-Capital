@@ -10,13 +10,13 @@ export function ContactSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="inline-block text-amber-600 text-sm font-semibold uppercase tracking-wider mb-3">
+          <span className="inline-block text-emerald-600 text-sm font-semibold uppercase tracking-wider mb-3">
             Get in Touch
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-slate-900 mb-6">
             Ready to Explore
             <br />
-            <span className="text-amber-600">Investment Opportunities?</span>
+            <span className="text-emerald-600">Investment Opportunities?</span>
           </h2>
           <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
             Connect with our team to discuss how Zweifel Capital can help you access alternative investment
@@ -33,23 +33,23 @@ export function ContactSection() {
             </CardHeader>
             <CardContent className="space-y-6">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Mail className="h-6 w-6 text-amber-600" />
+                <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Mail className="h-6 w-6 text-emerald-600" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-slate-900 mb-2">Email</h4>
-                  <a href="mailto:delfina@zweifelcapital.com" className="text-slate-600 hover:text-amber-600 transition-colors block">
+                  <a href="mailto:delfina@zweifelcapital.com" className="text-slate-600 hover:text-emerald-600 transition-colors block">
                     delfina@zweifelcapital.com
                   </a>
-                  <a href="mailto:kurt@zweifelcapital.com" className="text-slate-600 hover:text-amber-600 transition-colors block">
+                  <a href="mailto:kurt@zweifelcapital.com" className="text-slate-600 hover:text-emerald-600 transition-colors block">
                     kurt@zweifelcapital.com
                   </a>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Phone className="h-6 w-6 text-amber-600" />
+                <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Phone className="h-6 w-6 text-emerald-600" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-slate-900 mb-2">Phone / WhatsApp</h4>
@@ -58,8 +58,8 @@ export function ContactSection() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <MapPin className="h-6 w-6 text-amber-600" />
+                <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <MapPin className="h-6 w-6 text-emerald-600" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-slate-900 mb-2">Locations</h4>
@@ -90,7 +90,7 @@ export function ContactSection() {
 
               <div className="space-y-4">
                 <Button
-                  className="w-full bg-amber-500 hover:bg-amber-600 text-slate-900 font-semibold py-6 cursor-pointer"
+                  className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-6 cursor-pointer"
                   onClick={() =>
                     (window.location.href =
                       "mailto:delfina@zweifelcapital.com?subject=Investment Inquiry&body=Hello, I would like to learn more about investment opportunities with Zweifel Capital.")

@@ -26,7 +26,7 @@ export function OfficesSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="inline-block text-amber-600 text-sm font-semibold uppercase tracking-wider mb-3">
+          <span className="inline-block text-emerald-600 text-sm font-semibold uppercase tracking-wider mb-3">
             Our Presence
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-slate-900 mb-6">
@@ -58,12 +58,12 @@ export function OfficesSection() {
               {/* Content Overlay */}
               <div className="absolute bottom-0 left-0 right-0 p-8">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-amber-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-emerald-600 rounded-xl flex items-center justify-center flex-shrink-0">
                     <MapPin className="h-6 w-6 text-white" />
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-white mb-1">{office.city}</h3>
-                    <p className="text-amber-400 font-medium mb-3">{office.country}</p>
+                    <p className="text-emerald-400 font-medium mb-3">{office.country}</p>
                     <p className="text-slate-300 text-sm mb-1">{office.address}</p>
                     <p className="text-slate-300 text-sm mb-4">{office.postal}</p>
                     <p className="text-slate-400 text-sm">{office.description}</p>
