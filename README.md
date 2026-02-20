@@ -18,25 +18,29 @@ Website corporativo para **Zweifel Capital**, un family office dedicado a invers
 ```
 Zweifel-Capital/
 ├── app/
-│   ├── globals.css          # Variables de colores y tema global
+│   ├── globals.css          # Variables de colores y tema global (OKLCH)
 │   ├── layout.tsx           # Layout raíz (fuentes, metadata, analytics)
 │   └── page.tsx             # Página principal (single-page)
 ├── components/
-│   ├── navigation.tsx       # Navbar fija con logo, links y menú móvil
-│   ├── hero-section.tsx     # Banner principal con imagen de fondo, stats
-│   ├── about-section.tsx    # Sección "About" con cards de fundadores + timeline
-│   ├── services-section.tsx # Estrategia de inversión, áreas y ventajas
-│   ├── offices-section.tsx  # Oficinas (London, Nassau) con imágenes
-│   ├── contact-section.tsx  # Contacto (email, WhatsApp, ubicaciones)
-│   ├── footer.jsx           # Footer con disclaimer legal
+│   ├── navigation.tsx       # Navbar fija: Home, About, Strategy, Contact + "Get in Touch"
+│   ├── hero-section.tsx     # Carousel de 3 imágenes con crossfade, stats, CTAs
+│   ├── about-section.tsx    # Who We Are + cards de fundadores con bios expandibles
+│   ├── services-section.tsx # Strategy + Investment Focus + Our Edge (todo integrado)
+│   ├── offices-section.tsx  # Our Presence: London + Buenos Aires (sin fotos de ciudades)
+│   ├── contact-section.tsx  # Card por persona: email + teléfono + botón Gmail
+│   ├── footer.jsx           # Footer con oficinas, disclaimer legal, copyright
 │   ├── theme-provider.tsx   # Provider de temas (next-themes)
 │   └── ui/                  # Componentes shadcn/ui (button, card, etc.)
 ├── public/images/           # Imágenes estáticas
-│   ├── logo.png
-│   ├── hero-farmland.jpg
-│   ├── kurt-zweifel.jpg
-│   ├── delfina-zweifel.jpg
-│   ├── construction.jpg / construction2.jpg / construction3.jpg
+│   ├── logo.png             # Logo Zweifel Capital (azul corporativo)
+│   ├── hero-farmland1.jpg   # Hero carousel - imagen 1
+│   ├── hero-farmland2.jpg   # Hero carousel - imagen 2
+│   ├── hero-farmland3.jpg   # Hero carousel - imagen 3
+│   ├── hero-farmland4.jpg   # Imagen en Strategy (Land & Sustainable)
+│   ├── kurt-zweifel.jpg     # Foto Kurt (se muestra en B&W con CSS grayscale)
+│   ├── delfina-zweifel.jpg  # Foto Delfina (se muestra en B&W con CSS grayscale)
+│   ├── construction.jpg     # Imagen en Strategy (Real Estate)
+│   ├── construction2.jpg / construction3.jpg
 │   ├── capital-markets.jpg
 │   ├── london.jpg / office-london.jpg
 │   ├── nassau.jpg / nassau2.jpg / office-nassau.jpg
@@ -50,80 +54,136 @@ Zweifel-Capital/
 
 La web es **single-page** con scroll suave entre secciones:
 
-1. **Navigation** - Navbar fija con links: Home, About, Strategy, Offices, Contact + botón "Get in Touch"
-2. **Hero** - Imagen de fondo (farmland), tagline "40+ Years", título principal, CTAs, barra de stats
-3. **About** - Cards de fundadores (Kurt y Delfina Zweifel) con fotos, bios y timeline de la empresa
-4. **Strategy** - Áreas de inversión (Agriculture & Land, Real Estate), ventajas competitivas, principios
-5. **Offices** - London (1 Knightsbridge Green) y Nassau (Lyford Cay Drive) con fotos
-6. **Contact** - Info de contacto, botones de email y WhatsApp
-7. **Footer** - Contacto, oficinas, disclaimer legal, copyright
+1. **Navigation** (`navigation.tsx`)
+   - Navbar fija con logo a la izquierda
+   - Links agrupados a la derecha: Home, About, Strategy, Contact
+   - Botón "Get in Touch" → abre Gmail Compose a delfina@zweifelcapital.com
+   - Menú hamburguesa en móvil
 
-## Colores y Estilos
+2. **Hero** (`hero-section.tsx`)
+   - Carousel de 3 imágenes (hero-farmland1/2/3) con crossfade cada 6 segundos
+   - Indicadores de imagen (dots) clickeables
+   - Tagline: "35+ Years of Investment Heritage"
+   - Headline: "Real Assets. Real Partnerships. Real Returns."
+   - CTAs: "Learn More" → About | "View Our Strategy" → Strategy
+   - Stats: 35+ Years | 2 Continents | 100% Independent Ownership
 
-### Esquema Actual (branch `main` / `estilo-anterior`)
-Tema claro con acentos **amber/dorado** hardcodeados en los componentes:
-- **Fondo:** blanco / slate-50
-- **Texto:** slate-700 / slate-900
-- **Acentos:** amber-400, amber-500, amber-600 (botones, highlights, iconos)
-- **Secciones oscuras:** slate-900 (hero overlay, "Our Edge", footer)
+3. **About / Who We Are** (`about-section.tsx`)
+   - 3 párrafos sobre la empresa
+   - Cards de fundadores con fotos en **blanco y negro** (CSS `grayscale`)
+   - **Kurt Zweifel** — Co-Founder & Chief Investment Officer
+     - Ubicación: Buenos Aires, Zurich
+     - Trabajo: Sulzer, Lockwood Greene, Agribusiness Entrepreneur
+     - Educación: Diplom-Ingenieur ETH Zürich
+     - LinkedIn + botón "Read Full Biography" expandible
+   - **Delfina Zweifel** — Co-Founder & Chief Executive Officer
+     - Ubicación: New York, London, Nassau, Geneva
+     - Trabajo: J.P. Morgan, Vivaldi Group, Faro Capital, Welz
+     - Educación: Goizueta Business School, Southern Methodist University
+     - LinkedIn + botón "Read Full Biography" expandible
+
+4. **Strategy** (`services-section.tsx`) — incluye 4 sub-secciones:
+   - **Header**: "Real Assets. Patient Capital. Long-Term Value."
+   - **Investment Focus**: 2 cards con imagen (Real Estate + Land & Sustainable) + 2 items sin imagen (Co-Investment Partnerships + Cross-Border Access)
+   - **Investment Principles**: 5 principios con checkmarks
+   - **Our Edge**: sección oscura con 4 pilares (Partnership Alignment, Global Perspective, Transparency & Governance, Responsible Stewardship) + Multi-Generational Values
+
+5. **Our Presence** (`offices-section.tsx`)
+   - Solo texto, sin fotos de ciudades
+   - London: 7 Stratton Street, Mayfair, W1J 8LE
+   - Buenos Aires: Argentina
+
+6. **Contact** (`contact-section.tsx`)
+   - Una card por persona con email y teléfono
+   - Delfina: delfina@zweifelcapital.com | +44 7868 140 409
+   - Kurt: kurt@zweifelcapital.com | +54 9 2392 40-1456
+   - Botones "Contact Delfina" / "Contact Kurt" → abren **Gmail Compose** en nueva pestaña
+
+7. **Footer** (`footer.jsx`)
+   - Brand: "Zweifel Capital - Co-Investment Platform - Alternative Investments - Real Assets"
+   - Contacto: emails y teléfonos de ambos
+   - Oficinas: London (7 Stratton Street, Mayfair) + Nassau (Lyford Cay Club, Lyford Cay Drive)
+   - Disclaimer legal
+   - Copyright dinámico + link LinkedIn
+
+## Paleta de Colores
+
+### Esquema Actual: Azul + Esmeralda
+Tema claro con dos colores principales:
+
+**Azul corporativo** (matching logo) — para botones y elementos primarios:
+- `bg-blue-800 hover:bg-blue-900` — Botones (CTA, Get in Touch, Contact)
+- `hover:text-blue-800` — Links del nav en hover
+- `bg-blue-800` — Iconos de oficinas, iconos de investment focus
+
+**Esmeralda** — para acentos y highlights:
+- `text-emerald-600` — Labels de sección, títulos destacados, subtítulos de cards
+- `text-emerald-400` — Texto sobre fondos oscuros (hero, Our Edge, footer, títulos fundadores)
+- `text-emerald-500` — Checkmarks de principios
+- `text-emerald-300` — Tagline del hero
+- `bg-emerald-100` — Fondo de iconos en contact
+- `bg-emerald-500/20` — Badge del hero
+
+**Neutros:**
+- `bg-white` / `bg-slate-50` — Fondos de secciones
+- `text-slate-900` / `text-slate-700` / `text-slate-600` — Textos
+- `bg-slate-900` — Secciones oscuras (hero overlay, Our Edge, footer)
 
 ### Variables CSS en `globals.css`
-Los colores del tema se definen con variables CSS en formato OKLCH:
-- `--primary`: azul corporativo `oklch(0.35 0.15 240)`
-- `--accent`: verde `oklch(0.45 0.12 150)`
-- `--background`: blanco `oklch(0.99 0.005 240)`
-
-**NOTA IMPORTANTE:** Los componentes actualmente usan colores **amber** hardcodeados (ej: `bg-amber-500`, `text-amber-600`) en vez de las variables CSS. Para cambiar colores hay que modificar TANTO `globals.css` como cada componente individualmente.
-
-## Evolución de Estilos (Historial Git)
-
-| Commit | Branch | Estilo | Descripción |
-|--------|--------|--------|-------------|
-| `fb24169` | main | Grayscale | Tema original sin color, todo en grises |
-| `6e63293` | estilos | Grayscale | Cambio de estilos (sin cambios de color) |
-| `6d3201d` | estilos | Grayscale | Logo estilo |
-| `a45841f` | estilos | **Dark Navy Blue** | Tema oscuro premium con azul corporativo |
-| `23dd221` | main | - | Se agregaron fotos |
-| `2114d64` | main | **Light + Amber** | UI actual con amber/dorado, nueva sección offices |
-
-### Esquema Dark Navy (commit `a45841f` en branch `estilos`)
 ```css
---background: oklch(0.15 0.03 240);  /* Navy oscuro */
---primary: oklch(0.55 0.15 240);     /* Azul corporativo */
---accent: oklch(0.65 0.10 200);      /* Azul claro */
---border: oklch(0.30 0.03 240);      /* Borde sutil */
---secondary: oklch(0.22 0.03 240);   /* Slate oscuro */
+--primary: oklch(0.35 0.15 240);   /* Azul corporativo */
+--accent: oklch(0.45 0.12 150);    /* Verde/esmeralda */
+--background: oklch(0.99 0.005 240); /* Blanco */
 ```
 
-### Esquema Actual Light + Green (commit `2114d64`)
-```css
---background: oklch(0.99 0.005 240);  /* Blanco */
---primary: oklch(0.35 0.15 240);      /* Azul corporativo */
---accent: oklch(0.45 0.12 150);       /* Verde */
-```
+**Nota:** Los componentes usan clases de Tailwind directas (`blue-800`, `emerald-600`, etc.) en vez de las variables CSS. Para cambiar colores hay que modificar cada componente.
 
 ## Branches
 
-- **`main`** - Branch principal, versión actual con estilo light + amber
-- **`estilo-anterior`** - Branch actual de trabajo (basado en main)
-- **`estilos`** - Tiene el estilo dark navy blue (commit `a45841f`)
-- **`develop`** - Branch de desarrollo
+- **`main`** — Branch principal
+- **`estilo-anterior`** — Branch de trabajo actual (todas las correcciones de la clienta)
+- **`estilos`** — Tiene el estilo dark navy blue antiguo (commit `a45841f`)
+- **`develop`** — Branch de desarrollo
 
 ## Datos de Contacto (hardcodeados en componentes)
 
-- **Email Delfina:** delfina@zweifelcapital.com
-- **Email Kurt:** kurt@zweifelcapital.com
-- **Teléfono/WhatsApp:** +44 077 359 36395
-- **LinkedIn Delfina:** linkedin.com/in/delfina-zweifel-b9030241/
-- **Oficina London:** 1 Knightsbridge Green, SW1X 7NE, London, UK
-- **Oficina Nassau:** Lyford Cay Drive, P.O. Box N-7776, Bahamas
+| Dato | Valor |
+|------|-------|
+| Email Delfina | delfina@zweifelcapital.com |
+| Email Kurt | kurt@zweifelcapital.com |
+| Teléfono Delfina | +44 7868 140 409 |
+| Teléfono Kurt | +54 9 2392 40-1456 |
+| LinkedIn Delfina | linkedin.com/in/delfina-zweifel-b9030241/ |
+| LinkedIn Kurt | linkedin.com/in/kurt-zweifel/ |
+| Oficina London | 7 Stratton Street, Mayfair, W1J 8LE, London |
+| Oficina Nassau | Lyford Cay Club, Lyford Cay Drive, Nassau, Bahamas |
+| Oficina Buenos Aires | Buenos Aires, Argentina |
+
+## Comportamiento de Botones
+
+| Botón | Ubicación | Acción |
+|-------|-----------|--------|
+| Get in Touch | Navigation | Gmail Compose → delfina@zweifelcapital.com |
+| Learn More | Hero | Scroll → About section |
+| View Our Strategy | Hero | Scroll → Strategy section |
+| Read Full Biography | About (x2) | Expande/colapsa bio completa (state local) |
+| Contact Delfina | Contact | Gmail Compose → delfina@zweifelcapital.com |
+| Contact Kurt | Contact | Gmail Compose → kurt@zweifelcapital.com |
+
+## Funcionalidades Especiales
+
+- **Hero Carousel**: 3 imágenes rotan cada 6 segundos con crossfade (`transition-opacity duration-1500`). Indicadores de puntos clickeables abajo.
+- **Fotos B&W**: Fotos de fundadores con `grayscale` CSS. Posición ajustada con `objectPosition` inline style.
+- **Bios Expandibles**: Cada fundador tiene un `useState` que controla la visibilidad de la biografía completa.
+- **Gmail Compose**: Los botones de contacto abren `https://mail.google.com/mail/?view=cm&to=...` en nueva pestaña.
+- **Scroll Suave**: Navegación con `scrollIntoView({ behavior: "smooth" })`.
 
 ## Pendientes / Próximos Pasos
 
-- [ ] **Volver al estilo azul y verde anterior** - Reemplazar todos los colores amber hardcodeados por azul/verde, y que los componentes usen las variables CSS del tema
-- [ ] Considerar usar las variables CSS (`--primary`, `--accent`) en los componentes en vez de colores hardcodeados para facilitar cambios de tema futuros
 - [ ] Revisar responsive en móvil
 - [ ] Optimizar imágenes (formatos WebP/AVIF)
+- [ ] Considerar usar variables CSS (`--primary`, `--accent`) en componentes para facilitar cambios de tema futuros
+- [ ] Mergear `estilo-anterior` a `main` cuando esté aprobado por la clienta
 
 ## Comandos
 
@@ -144,15 +204,16 @@ npm start
 npm run lint
 ```
 
+## Tipos de Commit
 
-Tipos de Commit
-Tipo	Uso	Ejemplo
-feat	Nueva funcionalidad	feat: agregar filtro por etapa en leads
-fix	Corrección de bug	fix: corregir cálculo de días vencidos
-perf	Mejora de rendimiento	perf: optimizar query de leads con SQL directo
-refactor	Refactorización sin cambio funcional	refactor: extraer lógica de filtros a hook
-style	Cambios de estilo/formato	style: ajustar espaciado en cards móviles
-docs	Documentación	docs: agregar guía de usuario
-chore	Tareas de mantenimiento	chore: actualizar dependencias
-test	Tests	test: agregar tests para API de leads
-build	Cambios de build/deploy	build: configurar variables de Vercel
+| Tipo | Uso | Ejemplo |
+|------|-----|---------|
+| feat | Nueva funcionalidad | feat: agregar filtro por etapa en leads |
+| fix | Corrección de bug | fix: corregir cálculo de días vencidos |
+| perf | Mejora de rendimiento | perf: optimizar query de leads con SQL directo |
+| refactor | Refactorización sin cambio funcional | refactor: extraer lógica de filtros a hook |
+| style | Cambios de estilo/formato | style: ajustar espaciado en cards móviles |
+| docs | Documentación | docs: agregar guía de usuario |
+| chore | Tareas de mantenimiento | chore: actualizar dependencias |
+| test | Tests | test: agregar tests para API de leads |
+| build | Cambios de build/deploy | build: configurar variables de Vercel |
