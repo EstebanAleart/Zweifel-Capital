@@ -1,8 +1,8 @@
 "use client"
 
 import { useState } from "react"
-import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
+import { Button } from "@/components/ui/button"
 import Image from "next/image"
 
 export function Navigation() {
@@ -18,8 +18,8 @@ export function Navigation() {
 
   const navLinks = [
     { label: "Home", id: "home" },
-    { label: "About", id: "about" },
-    { label: "Strategy", id: "strategy" },
+    { label: "Who We Are", id: "about" },
+    { label: "Investment Strategy", id: "strategy" },
     { label: "Contact", id: "contact" },
   ]
 
@@ -39,24 +39,16 @@ export function Navigation() {
           </button>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            <div className="flex items-center space-x-8">
-              {navLinks.map((link) => (
-                <button
-                  key={link.id}
-                  onClick={() => scrollToSection(link.id)}
-                  className="text-slate-700 hover:text-blue-800 transition-colors font-medium text-sm cursor-pointer"
-                >
-                  {link.label}
-                </button>
-              ))}
-            </div>
-            <Button
-              className="bg-blue-800 hover:bg-blue-900 text-white font-semibold cursor-pointer"
-              onClick={() => window.open("https://mail.google.com/mail/?view=cm&to=delfina@zweifelcapital.com&su=Investment+Inquiry&body=Hello,+I+would+like+to+learn+more+about+investment+opportunities+with+Zweifel+Capital.", "_blank")}
-            >
-              Get in Touch
-            </Button>
+          <div className="hidden md:flex items-center space-x-10">
+            {navLinks.map((link) => (
+              <button
+                key={link.id}
+                onClick={() => scrollToSection(link.id)}
+                className="text-slate-700 hover:text-blue-900 transition-colors font-medium text-base cursor-pointer tracking-wide"
+              >
+                {link.label}
+              </button>
+            ))}
           </div>
 
           {/* Mobile menu button */}
@@ -75,19 +67,11 @@ export function Navigation() {
                 <button
                   key={link.id}
                   onClick={() => scrollToSection(link.id)}
-                  className="block w-full text-left px-4 py-3 text-slate-700 hover:text-blue-800 hover:bg-slate-50 rounded-lg transition-colors cursor-pointer"
+                  className="block w-full text-left px-4 py-3 text-slate-700 hover:text-blue-900 hover:bg-slate-50 rounded-lg transition-colors cursor-pointer text-base"
                 >
                   {link.label}
                 </button>
               ))}
-              <div className="px-4 pt-2">
-                <Button
-                  className="w-full bg-blue-800 hover:bg-blue-900 text-white font-semibold cursor-pointer"
-                  onClick={() => window.open("https://mail.google.com/mail/?view=cm&to=delfina@zweifelcapital.com&su=Investment+Inquiry&body=Hello,+I+would+like+to+learn+more+about+investment+opportunities+with+Zweifel+Capital.", "_blank")}
-                >
-                  Get in Touch
-                </Button>
-              </div>
             </div>
           </div>
         )}
