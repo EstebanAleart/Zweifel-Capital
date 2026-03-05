@@ -2,10 +2,10 @@ export default function Footer() {
   return (
     <footer className="bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
           <div>
-            <h3 className="text-lg font-bold mb-3 text-white tracking-wide">Zweifel Capital</h3>
+            <h3 className="text-lg font-bold mb-3 text-white tracking-wide">Zweifel Capital Ltd.</h3>
             <p className="text-slate-500 text-sm leading-relaxed">
               Co-Investment Platform<br />
               Alternative Investments · Real Assets
@@ -18,15 +18,6 @@ export default function Footer() {
               >
                 info@zweifelcapital.com
               </a>
-            </div>
-          </div>
-
-          {/* London */}
-          <div>
-            <h4 className="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-4">London</h4>
-            <div className="text-slate-400 text-sm leading-relaxed">
-              <p>7 Stratton Street, Mayfair</p>
-              <p>W1J 8LE, London</p>
             </div>
           </div>
 
@@ -44,8 +35,8 @@ export default function Footer() {
           <div>
             <h4 className="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-4">Buenos Aires</h4>
             <div className="text-slate-400 text-sm leading-relaxed">
-              <p>Av. Leandro N. Alem 1074</p>
-              <p>10º Piso, CABA</p>
+              <p>Zenteno 3190</p>
+              <p>CABA, Provincia de Buenos Aires</p>
               <p>Argentina</p>
             </div>
           </div>
@@ -60,7 +51,7 @@ export default function Footer() {
             indicative of future results.
           </p>
           <p className="text-slate-600 text-xs">
-            © {new Date().getFullYear()} Zweifel Capital. All rights reserved.
+            © {new Date().getFullYear()} Zweifel Capital Ltd. All rights reserved.
           </p>
         </div>
       </div>
